@@ -6,17 +6,17 @@ pipeline {
                 echo 'Run the static analysis to the code' 
             }
         }
-        stage('Compile') {
+        stage('Compile1') {
             steps {
                 echo 'Compile the source code' 
             }
         }
-        stage('Security Check') {
+        stage('Security') {
             steps {
                 echo 'Run the security check against the application' 
             }
         }
-        stage('Run Unit Tests') {
+        stage(' Tests') {
             steps {
                 echo 'Run unit tests from the source code' 
             }
@@ -24,6 +24,7 @@ pipeline {
         stage('Run Integration Tests') {
             steps {
                 echo 'Run only crucial integration tests from the source code' 
+                echo'yasir'
             }
         }
         stage('Publish Artifacts') {
